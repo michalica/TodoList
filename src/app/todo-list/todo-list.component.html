@@ -1,5 +1,6 @@
   <mat-selection-list #shoes>
-    <mat-list-option *ngFor="let item of todoItems">
+    <mat-list-option *ngFor="let item of todoItems; let i = index">
+      <mat-icon (click)="deleteTodo(i)"  matListIcon>clear</mat-icon>
       {{item.name}}
     </mat-list-option>
   </mat-selection-list>

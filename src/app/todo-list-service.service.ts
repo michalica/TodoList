@@ -8,6 +8,7 @@ export class TodoListServiceService {
   constructor() {
     console.log('service connected');
   }
+
   getTodoItems() {
     return this.todoItems;
   }
@@ -17,5 +18,8 @@ export class TodoListServiceService {
       name: item
     };
     this.todoItems.unshift(itemOfTodo);
+  }
+  deleteTodo(index) {
+    this.todoItems.splice(index, 1);
   }
 }

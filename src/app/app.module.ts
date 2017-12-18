@@ -10,6 +10,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListServiceService } from './todo-list-service.service';
 import { InputComponent } from './input/input.component';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -23,7 +25,9 @@ import { MatInputModule } from '@angular/material/input';
     BrowserModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [TodoListServiceService],
   bootstrap: [AppComponent]

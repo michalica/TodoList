@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from '../todo';
-import { TodoItem } from './todo-item';
+import { TodoItem } from '../todo-item';
 
 import { TodoListServiceService } from '../todo-list-service.service';
 
@@ -19,4 +18,8 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteTodo(index) {
+    console.log(index);
+    this.todoListService.deleteTodo(index);
+  }
 }
