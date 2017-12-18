@@ -5,18 +5,27 @@ import { MatListModule } from '@angular/material/list';
 
 
 import { AppComponent } from './app.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+
+import { TodoListServiceService } from './todo-list-service.service';
+import { InputComponent } from './input/input.component';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatListModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [TodoListServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
