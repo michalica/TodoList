@@ -6,13 +6,15 @@ export class TodoListServiceService {
 
   todoItems:TodoItem[] =[];
   constructor() {
-    console.log('service connected');
   }
 
   getTodoItems() {
     return this.todoItems;
   }
   setTodoItems(item) {
+    if(item === ''){
+      return false;
+    }
     let itemOfTodo:TodoItem = {
       checked: false,
       name: item
@@ -21,5 +23,8 @@ export class TodoListServiceService {
   }
   deleteTodo(index) {
     this.todoItems.splice(index, 1);
+  }
+  changeStateOfTodo(index, boolean) {
+    this.todoItems[index].checked = boolean;
   }
 }

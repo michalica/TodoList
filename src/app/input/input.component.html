@@ -1,5 +1,5 @@
-<form (submit)="addTodo(todoInput.value)" >
+<form (submit)="addTodo()" >
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="New Todo" value="" #todoInput>
+    <input matInput placeholder="New Todo" [(ngModel)]="formHolder" name="first" value="">
   </mat-form-field>
 </form>

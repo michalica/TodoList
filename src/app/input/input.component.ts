@@ -8,6 +8,7 @@ import { TodoListServiceService } from '../todo-list-service.service'
 })
 export class InputComponent implements OnInit {
 
+  formHolder = "";
   constructor(private todoListService:TodoListServiceService) {
     todoListService.setTodoItems('new Todo');
   }
@@ -15,8 +16,9 @@ export class InputComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTodo(item) {
-    this.todoListService.setTodoItems(item);
+  addTodo() {
+    this.todoListService.setTodoItems(this.formHolder);
+    this.formHolder = "";
     return false;
   }
 }

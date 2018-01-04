@@ -1,5 +1,5 @@
-  <mat-selection-list #shoes>
-    <mat-list-option *ngFor="let item of todoItems; let i = index">
+  <mat-selection-list  #shoes>
+    <mat-list-option  *ngFor="let item of todoItems; let i = index" [ngStyle]="{'color': item.checked === true ? '#ccc' : '', 'text-decoration': item.checked === true ? 'line-through' : ''  }" (selectionChange) ="getOption($event, i)">
       <mat-icon (click)="deleteTodo(i)"  matListIcon>clear</mat-icon>
       {{item.name}}
     </mat-list-option>

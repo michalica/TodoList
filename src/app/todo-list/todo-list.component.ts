@@ -19,7 +19,9 @@ export class TodoListComponent implements OnInit {
   }
 
   deleteTodo(index) {
-    console.log(index);
     this.todoListService.deleteTodo(index);
+  }
+  getOption(data, i) {
+    this.todoListService.changeStateOfTodo(i, data.selected);
   }
 }
